@@ -5,7 +5,7 @@
       <p class="text-gray-300 font-size-030">/Games</p>
       <p class="text-gray-300 font-size-020">Desenvolvimento de games digitais</p>
       <p class="text-gray-300 font-size-012">
-        Empresa especializada em desenvolvimento de games e digitais e
+        Empresa especializada em desenvolvimento de games e digitais e 
         gamificação
       </p>
       <p class="text-white font-size-012">
