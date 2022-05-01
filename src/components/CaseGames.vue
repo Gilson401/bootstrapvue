@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="right align-self-center">
-      <p class="text-white">/News</p>
+      <p class="text-white">/Projetos</p>
       <p class="text-gray-300 font-size-030">/Cases Games</p>
       <b-row cols="5">
 

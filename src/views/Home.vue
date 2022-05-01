@@ -35,7 +35,6 @@
     </nav>
 
     <main class="content">
-
       <section v-for="comp in links" :key="comp.route" :ref="comp.route">
         <component  v-bind:is="comp.component" />
       </section>
@@ -62,9 +61,7 @@ export default {
     return {
       links: [
         { label: "/Quem Somos", route: "quemsomos", component: QuemSomos },
-        { label: "/O que fazemos", route: "fazemos", component: CaseGames },
-        // { label: "/News", route: "news" },
-        // { label: "/Nossos Clientes", route: "clientes" },
+        { label: "/Projetos", route: "projetos", component: CaseGames },
         { label: "/Contato", route: "contato", component: Contact },
       ],
     };

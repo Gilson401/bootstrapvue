@@ -1,7 +1,8 @@
 <template>
   <div class="content">
     <div class="right align-self-center">
-      <p class="text-gray-300 font-size-030">/Contato</p>
+     <p class="text-white">/Contato</p>
+      <p class="text-gray-300 font-size-030">/Mensagem</p>
 
       <b-row cols="2">
         <b-col>

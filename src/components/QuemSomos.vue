@@ -1,8 +1,8 @@
 <template>
   <div class="content">
     <div class="left align-self-center">
-      <p class="text-white">/O que fazemos</p>
-      <p class="text-gray-300 font-size-030">/Games</p>
+      <p class="text-white">/Quem somos.</p>
+      <p class="text-gray-300 font-size-030">/We Do Games</p>
       <p class="text-gray-300 font-size-020">Desenvolvimento de games digitais</p>
       <p class="text-gray-300 font-size-012">
         Empresa especializada em desenvolvimento de games e digitais e 
