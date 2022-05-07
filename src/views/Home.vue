@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-container">
+  <div class="home-container">
     <nav class="menu">
       <div>
         <b-img
@@ -34,9 +34,35 @@
       </ul>
     </nav>
 
+
+<div class="mobile-menu fixed-top">
+  <b-navbar class="px-4 w-100" toggleable type="dark" variant="dark">
+    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+
+    <b-navbar-toggle target="navbar-toggle-collapse">
+      <template #default="{ expanded }">
+        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+        <b-icon v-else icon="chevron-bar-down"></b-icon>
+      </template>
+    </b-navbar-toggle>
+
+    <b-collapse id="navbar-toggle-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item
+          v-for="(link, index) in links"
+          :key="index"
+           :href="`#${link.route}`"> 
+           {{ link.label }} 
+           </b-nav-item>
+
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
+
     <main class="content">
-      <section v-for="comp in links" :key="comp.route" :ref="comp.route">
-        <component  v-bind:is="comp.component" />
+      <section  v-for="comp in links" :key="comp.route" :ref="comp.route" :id="comp.route">
+        <component v-bind:is="comp.component" />
       </section>
     </main>
   </div>
@@ -69,73 +95,92 @@ export default {
   components: { QuemSomos, CaseGames },
   methods: {
     scrollToAnchorPoint(refName) {
-      const el =  this.$refs[refName][0];
+      const el = this.$refs[refName][0];
       el.scrollIntoView({ behavior: "smooth" });
     },
   },
 };
 </script>
 <style>
-.grid-container {
-  display: grid;
-  grid-template-areas: "menu content";
-  grid-template-columns: 15% 85%;
-  background-color: rgb(30, 30, 30);
-  height: 100vh;
+
+.home-container {
+    background-color: rgb(30, 30, 30);
+}
+.menu{
+    display: none;
 }
 
-.menu {
-  grid-area: menu;
-  border-right: 1px solid rgb(62, 62, 62);
+.mobile-menu{
+    display: flex;
+    width: 100vw;
 }
 
-main {
-  overflow: hidden;
-  overflow-y: auto;
-}
+@media screen and (min-width: 768px) {
+    .mobile-menu{
+         display: none;
+    }
+  .home-container {
+    display: grid;
+    grid-template-areas: "menu content";
+    grid-template-columns: 15% 85%;
 
-main::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+    height: 100vh;
+  }
 
-.menu-list {
-  list-style: none;
-  margin-left: 0;
-  text-align: left;
-  text-transform: uppercase;
-}
+  .menu {
+    display:block;  
+    grid-area: menu;
+    border-right: 1px solid rgb(62, 62, 62);
+  }
 
-.row {
-  margin-right: 0;
-  margin-left: 0;
-}
+  main {
+    overflow: hidden;
+    overflow-y: auto;
+  }
 
-li {
-  cursor: pointer;
-  height: 70px;
-}
+  main::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-.link {
-  top: 33px;
+  .menu-list {
+    list-style: none;
+    margin-left: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
 
-  display: inline-block;
-  vertical-align: middle;
-  /* transform: translateZ(0); */
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-.link:hover,
-.link:focus,
-.link:active {
-  transform: scale(1.1);
-}
+  li {
+    cursor: pointer;
+    height: 70px;
+  }
 
-.content{
+  .link {
+    top: 33px;
+
+    display: inline-block;
+    vertical-align: middle;
+    /* transform: translateZ(0); */
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .link:hover,
+  .link:focus,
+  .link:active {
+    transform: scale(1.1);
+  }
+
+  .content {
     padding-left: 30px;
+  }
 }
 </style>
