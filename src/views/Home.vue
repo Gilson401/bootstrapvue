@@ -103,9 +103,6 @@ export default {
 </script>
 <style>
 
-.home-container {
-    background-color: rgb(30, 30, 30);
-}
 .menu{
     display: none;
 }

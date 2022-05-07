@@ -4,9 +4,9 @@ import App from './App.vue'
 import VueMeta from 'vue-meta'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-import './assets/css/main.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './assets/css/main.css';
 
 Vue.use(VueMeta, {
     // optional pluginOptions
