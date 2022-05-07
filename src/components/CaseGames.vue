@@ -3,9 +3,11 @@
     <div class="right align-self-center">
       <p class="text-white">/Projetos</p>
       <p class="text-gray-300 font-size-030">/Cases Games</p>
-      <b-row cols="5">
+      <b-row>
 
-        <b-col v-for="index in 5" :key="index">
+        <b-col v-for="index in 4" :key="index"
+        cols="12" md="3"
+        >
           <div class="card">
             <img class="card-img mb-3" src="https://picsum.photos/280/180/?image=25" alt="" />
 
@@ -64,7 +66,7 @@ p {
 .card {
   width: auto;
   height: auto;
-  
+  margin-bottom: 30px;
   background-color: rgb(41,41,41);
 }
 
