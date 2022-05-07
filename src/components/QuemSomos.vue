@@ -17,8 +17,9 @@
     </div>
 
     <div class="right align-self-center">
-      <b-row cols="4">
-        <b-col v-for="index in 3" :key="index">
+      <b-container >
+      <b-row >
+        <b-col v-for="index in 3" :key="index" cols="12" md="3">
           <div>
             <img class="card-img mb-3" src="https://picsum.photos/200/200/?image=25" alt="" />
 
@@ -29,7 +30,7 @@
           </div>
         </b-col>
 
-        <b-col>
+        <b-col cols="12" md="3">
           <div>
               
             <img class="card-img mb-3" src="../assets/joystick.png" alt="" />
@@ -47,6 +48,7 @@
           </div>
         </b-col>
       </b-row>
+      </b-container >
     </div>
   </div>
 </template>
@@ -61,6 +63,13 @@ export default {
 </script>
 
 <style scoped>
+
+.content {
+padding: 30px 30px 0 30px;
+}
+
+
+@media screen and (min-width: 768px) {
 .content {
   grid-area: content;
   display: grid;
@@ -68,7 +77,7 @@ export default {
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
   height: 100vh;
-  padding: 0 30px 0 30px;
+  
 }
 
 p {
@@ -91,5 +100,6 @@ p {
 .card-img {
   aspect-ratio: 1;
   width: 100%;
+}
 }
 </style>

@@ -37,7 +37,7 @@
 
 <div class="mobile-menu fixed-top">
   <b-navbar class="px-4 w-100" toggleable type="dark" variant="dark">
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand href="#">Teu Logo</b-navbar-brand>
 
     <b-navbar-toggle target="navbar-toggle-collapse">
       <template #default="{ expanded }">
